@@ -1,29 +1,30 @@
 import turtle as tt
 
+# L-system generator
 def generate(axiom: str, rules: dict[str, str], iterations: int) -> str:
     s = axiom
     for _ in range(iterations):
         s = ''.join(rules.get(ch, ch) for ch in s)
     return s
 
+# drawing function using turtle graphics
 def draw(sentence: str, angle: float = 25.0, step: float = 5.0,
          linewidth: int = 2, color: str = "green") -> None:
     screen = tt.Screen()
     t = tt.Turtle()
     t.hideturtle()
-    t.speed(0)
+    t.speed(5)
     t.pensize(linewidth)
     t.pencolor(color)
-
-    # Start nederst i vinduet, pekende opp
     screen.update()
     t.penup()
     t.goto(0, -screen.window_height() // 2 + 40)
     t.setheading(90)
     t.pendown()
-
+    
     stack: list[tuple[tuple[float, float], float]] = []
 
+    # L-system drawing logic
     for ch in sentence:
         if ch == 'F':
             t.forward(step)
@@ -40,12 +41,12 @@ def draw(sentence: str, angle: float = 25.0, step: float = 5.0,
                 t.goto(pos)
                 t.setheading(head)
                 t.pendown()
-        # 'X' og andre tegn: ingen tegning
-
+                
     screen.mainloop()
 
+# Main function to generate and draw the plant
 def plant(iterations: int = 5, angle: float = 25.0,
-          size: float = 300.0, linewidth: int = 2, color: str = "green") -> None:
+          size: float = 300.0, linewidth: int = 3, color: str = "green") -> None:
     rules = {
         "X": "F+[[X]-X]-F[-FX]+X",
         "F": "FF",
@@ -53,11 +54,10 @@ def plant(iterations: int = 5, angle: float = 25.0,
     axiom = "X"
     sentence = generate(axiom, rules, iterations)
 
-    # Grovt skaleringsvalg: segmentlengde minker eksponentielt med iterasjoner
+    # initial step size adjusted for iterations
     step = size / (2 ** iterations)
-
     draw(sentence, angle=angle, step=step, linewidth=linewidth, color=color)
-
+    
+#Draw the plant if this file is run as a script
 if __name__ == "__main__":
-    # Justér gjerne parametrene under
-    plant(iterations=5, angle=25, size=300, linewidth=2, color="forest green")
+    plant()
