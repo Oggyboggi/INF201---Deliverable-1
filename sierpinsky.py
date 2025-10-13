@@ -1,44 +1,45 @@
 import turtle as t
 
 # Function to draw Sierpinski curve X-axis
-def sierpinskyX(turtle, depth, length):
-    turtle.pencolor("blue") # Set pen color to blue
+def sierpinskyX(turtle, depth, step):
     if depth == 0:
-        turtle.forward(length)
+        turtle.pencolor("blue")         # Set pen color to blue
+        turtle.forward(step)
     else:
-        sierpinskyY(turtle, depth - 1, length)
+        sierpinskyY(turtle, depth - 1, step)
         turtle.left(60)
-        turtle.forward(length)
-        sierpinskyX(turtle, depth - 1, length)
+        sierpinskyX(turtle, depth - 1, step)
         turtle.left(60)
-        turtle.forward(length)
-        sierpinskyY(turtle, depth - 1, length)
+        sierpinskyY(turtle, depth - 1, step)
 
 # Function to draw Sierpinski curve Y-axis
-def sierpinskyY(turtle, depth, length):
-    turtle.pencolor("red") # Set pen color to red
+def sierpinskyY(turtle, depth, step):
     if depth == 0:
-        turtle.forward(length)
+        turtle.pencolor("red")          # Set pen color to red
+        turtle.forward(step)
     else:
-        sierpinskyX(turtle, depth - 1, length)
+        sierpinskyX(turtle, depth - 1, step)
         turtle.right(60)
-        turtle.forward(length)
-        sierpinskyY(turtle, depth - 1, length)
+        sierpinskyY(turtle, depth - 1, step)
         turtle.right(60)
-        turtle.forward(length)
-        sierpinskyX(turtle, depth - 1, length)
+        sierpinskyX(turtle, depth - 1, step)
         
 # Main function to initiate Sierpinski curve drawing
-def sierpinsky(turtle, depth):
-    sierpinskyX(turtle, depth, 10)
+def sierpinsky(turtle, depth, size=600):
+    step = size / (2 ** depth)
+    
+    turtle.penup()
+    turtle.goto(-size / 2, -size / 2.5)  # Center the drawing
+    turtle.pendown()
+    
+    sierpinskyX(turtle, depth, step)
 
 # Set up the turtle environment
 t.setup(800, 800)
 pen = t.Turtle()
 pen.speed(0)
-pen.penup()
-pen.goto(-200, 150)
-pen.pendown()
+pen.hideturtle()
+pen.pensize(4)
 
-sierpinsky(pen, 4)
+sierpinsky(pen, depth=5, size=700)
 t.done()
