@@ -6,10 +6,13 @@ The Deliverable is mostly centered around Turtle and serves as an introduction t
 
 Contents:
 
-Task 1 - [Co-author a README](README.md) 
-Task 2 - [Draw a complete snowflake](snowflake.py) 
-Task 3 - [Draw a Sierpinsky curve](sierpinsky.py) 
-Task 4 - [Draw a fractal plant](plant.py) 
+Task 1 - [Co-author a README](README.md)
+
+Task 2 - [Draw a complete snowflake](snowflake.py)
+
+Task 3 - [Draw a Sierpinsky curve](sierpinsky.py)
+
+Task 4 - [Draw a fractal plant](plant.py)
 
 Created by Iver Rannug Fossan and Oscar Wiersdalen Thunold
 
