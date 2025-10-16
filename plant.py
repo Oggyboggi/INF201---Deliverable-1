@@ -1,3 +1,8 @@
+"""
+Created by Iver Rannug Fossan and Oscar Wiersdalen Thunold
+
+Task 4
+"""
 import turtle as tt
 
 # L-system generator
@@ -60,4 +65,5 @@ def plant(iterations: int = 5, angle: float = 25.0,
     
 #Draw the plant if this file is run as a script
 if __name__ == "__main__":
+
     plant()
