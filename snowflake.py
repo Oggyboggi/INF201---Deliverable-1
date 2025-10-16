@@ -1,3 +1,9 @@
+"""
+Created by Iver Rannug Fossan and Oscar Wiersdalen Thunold
+
+Task 2
+"""
+
 import turtle
 
 # Function pulled from "INF201_H25_D1_Intro.ipynb"
@@ -38,5 +44,6 @@ turtle.speed(0)  # Fastest drawing speed
 
 # Draw the snowflake
 complete_snowflake(turtle=turtle, depth=3, size=300, linewidth=2, color='pink')
+
 
 
