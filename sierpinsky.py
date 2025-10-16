@@ -1,3 +1,9 @@
+"""
+Created by Iver Rannug Fossan and Oscar Wiersdalen Thunold
+
+Task 3
+"""
+
 import turtle as t
 
 # Function to draw Sierpinski curve X-axis
@@ -42,4 +48,5 @@ pen.hideturtle()
 pen.pensize(4)
 
 sierpinsky(pen, depth=5, size=700)
+
 t.done()
