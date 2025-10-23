@@ -1,4 +1,4 @@
-# INF201---Deliverable-1
+# INF201---Deliverable-2
 
 This folder contains tasks for the second deliverable in INF201!
 
