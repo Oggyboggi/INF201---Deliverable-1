@@ -1,6 +1,6 @@
 # INF201---Deliverable-1
 
-This repositary contains tasks for the first deliverable in INF201!
+This folder contains tasks for the first deliverable in INF201!
 
 The deliverable is mostly centered around Turtle and serves as an introduction to the basics of drawing with Turtle.
 
