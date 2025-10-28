@@ -2,14 +2,9 @@
 
 This folder contains tasks for the second deliverable in INF201!
 
-Contents:
+All the tasks are completed in the same file
 
-Task 1 - [](drawing-py)
+---> [drawing.py](drawing-py) <---
 
-Task 2 - []()
-
-Task 3 - []()
-
-Task 4 - []()
 
 Created by Iver Rannug Fossan and Oscar Wiersdalen Thunold
