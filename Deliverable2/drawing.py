@@ -108,7 +108,7 @@ if __name__ == "__main__":
     Turtle.speed(0)
     Turtle.hideturtle()
 
-    print("Rectangles")
+    print("--- Rectangles ---")
     rects = [
         Rectangle((-1.5, -2), (1.5, 2), color="black", linewidth=3),
         Rectangle((-4, -1), (-1, 1), color="gray", linewidth=2),
@@ -118,7 +118,7 @@ if __name__ == "__main__":
         r.info()
         r.draw(Turtle, scale=50)
 
-    print("Triangles")
+    print("--- Triangles ---")
     triangles = [
         Triangle((0, 0), (2, 0), (1, 2), color="red", linewidth=2),
         Triangle((-3, -1), (-1, -1), (-2, 1), color="green", linewidth=3),
@@ -127,7 +127,7 @@ if __name__ == "__main__":
         tri.info()
         tri.draw(Turtle, scale=50)
 
-    print("Circles")
+    print("--- Circles ---")
     circles = [
         Circle((3, 3), 1, color="blue", linewidth=2),
         Circle((-3, 3), 0.5, color="orange", linewidth=3),
