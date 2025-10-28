@@ -2,7 +2,7 @@
 
 This folder contains tasks for the second deliverable in INF201!
 
-All the tasks are completed within the same file:
+All the tasks are done within the same file:
 
 ---> [drawing.py](drawing-py) <---
 
